@@ -9,25 +9,25 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/** Класс сущности: словарь курса валюты */
+/** Класс сущности: страна */
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
 @Table(
-        name = "rate_dict",
+        name = "countries",
         uniqueConstraints = {@UniqueConstraint(columnNames = {"num_code", "char_code"})})
-public class RateDictEntity extends ABaseEntity {
+public class CountryEntity extends ABaseEntity {
 
-    /** Наименование валюты */
+    /** Наименование страны */
     @Column(name = "name", nullable = false)
     private String name;
 
-    /** Числовой код валюты */
+    /** Числовой код страны */
     @Column(name = "num_code", nullable = false)
     private Integer numCode;
 
-    /** Символьный код валюты */
+    /** Символьный код страны */
     @Column(name = "char_code", nullable = false)
     private String charCode;
 }
