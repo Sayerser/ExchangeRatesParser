@@ -7,9 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -19,6 +17,8 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @Entity
+@Builder
+@AllArgsConstructor
 @Table(name = "rates")
 public class RateEntity extends AFixationBaseEntity {
 
@@ -34,7 +34,7 @@ public class RateEntity extends AFixationBaseEntity {
     /** Курс валюты по словарю */
     @ManyToOne
     @JoinColumn(name = "rate_dict_id")
-    private RateDictEntity rateDict;
+    private RateDictEntity rateDictId;
 
     /** Дата курса */
     @Column(name = "rate_date")

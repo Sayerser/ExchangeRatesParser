@@ -1,6 +1,7 @@
 package com.rates.spring.rest.dto.response.base;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.rates.spring.rest.dto.response.base.AResponse;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

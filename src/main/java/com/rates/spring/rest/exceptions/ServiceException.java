@@ -2,7 +2,6 @@ package com.rates.spring.rest.exceptions;
 
 import com.rates.spring.rest.domain.base.Identifiable;
 import com.rates.spring.rest.dto.response.base.ErrorResponse;
-import java.util.function.Supplier;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
