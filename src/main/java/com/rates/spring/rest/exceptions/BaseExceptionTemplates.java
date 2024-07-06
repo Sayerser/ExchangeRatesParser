@@ -148,4 +148,53 @@ public class BaseExceptionTemplates {
                 .build();
     }
 
+    //Собственные дополнительные шаблоны
+    /**
+     * Ошибка авторизации. Пользователь не авторизован для доступа к ресурсу
+     * <ul>
+     *     <li/>Код ответа: {@code 401}
+     *     <li/>Внутренний код ошибки: {@code 200}
+     *     <li/>Логировать исключение: {@code true}
+     *     <li/>Шаблон сообщения: {@code Unauthorized access}
+     * </ul>
+     */
+    public static final ExceptionTemplate UnauthorizedAccess = ExceptionTemplate.builder()
+            .responseStatus(401)
+            .errorCode(200)
+            .errorMessageTemplate("Неавторизированный доступ")
+            .logException(true)
+            .build();
+
+    /**
+     * Ошибка валидации. Неверный формат данных
+     * <ul>
+     *     <li/>Код ответа: {@code 400}
+     *     <li/>Внутренний код ошибки: {@code 105}
+     *     <li/>Логировать исключение: {@code false}
+     *     <li/>Шаблон сообщения: {@code Invalid data format}
+     * </ul>
+     */
+    public static final ExceptionTemplate InvalidDataFormat = ExceptionTemplate.builder()
+            .responseStatus(400)
+            .errorCode(105)
+            .errorMessageTemplate("Неверный формат данных")
+            .logException(false)
+            .build();
+
+    /**
+     * Ошибка сервера базы данных. Проблемы с подключением или запросом
+     * <ul>
+     *     <li/>Код ответа: {@code 503}
+     *     <li/>Внутренний код ошибки: {@code 300}
+     *     <li/>Логировать исключение: {@code true}
+     *     <li/>Шаблон сообщения: {@code Database server error}
+     * </ul>
+     */
+    public static final ExceptionTemplate DatabaseServerError = ExceptionTemplate.builder()
+            .responseStatus(503)
+            .errorCode(300)
+            .errorMessageTemplate("Ошибка сервера")
+            .logException(true)
+            .build();
+
 }
