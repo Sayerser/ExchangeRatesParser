@@ -3,7 +3,7 @@ package com.rates.spring.rest.controller;
 import com.rates.spring.rest.dto.response.base.ErrorResponse;
 import com.rates.spring.rest.exceptions.BaseExceptionTemplates;
 import com.rates.spring.rest.exceptions.ServiceException;
-import com.rates.spring.rest.service.ConverterService;
+import com.rates.spring.rest.service.converter.ConverterService;
 import java.nio.file.AccessDeniedException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,6 @@ public class ExceptionControllerAdvice {
             ConverterService<ServiceException, ErrorResponse> exceptionToResponseConverterService) {
         this.exceptionToResponseConverterService = exceptionToResponseConverterService;
     }
-
     @ExceptionHandler(BindException.class)
     public ResponseEntity<ErrorResponse> handleBindingException(BindException e) {
         BindingResult bindingResult = e.getBindingResult();

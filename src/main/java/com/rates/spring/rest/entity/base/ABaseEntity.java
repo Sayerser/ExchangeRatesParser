@@ -9,7 +9,7 @@ import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.UuidGenerator;
 
 /**
  * Базовый класс для всех сущностей с типом идентификатора {@link UUID}
@@ -24,8 +24,8 @@ public abstract class ABaseEntity implements Identifiable<UUID> {
      * Первичный ключ
      */
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2")
+    @GeneratedValue
+    @UuidGenerator
     @Column(name = "id", nullable = false, unique = true, columnDefinition = "BINARY(16)")
     protected UUID id;
 

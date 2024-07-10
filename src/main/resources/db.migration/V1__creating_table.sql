@@ -14,13 +14,6 @@
         name varchar(255) not null,
         primary key (id)
     )
-    create table rate_dict (
-        num_code integer not null,
-        id uuid not null,
-        char_code varchar(255) not null,
-        name varchar(255) not null,
-        primary key (id)
-    )
 
     create table rates (
             value numeric(38,2) not null,

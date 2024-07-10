@@ -1,6 +1,5 @@
-package com.rates.spring.rest.service.Impl;
+package com.rates.spring.rest.service.impl;
 
-import com.rates.spring.rest.dto.response.RateResponse;
 import com.rates.spring.rest.entity.RateEntity;
 import com.rates.spring.rest.exceptions.BaseExceptionTemplates;
 import com.rates.spring.rest.exceptions.ServiceException;
