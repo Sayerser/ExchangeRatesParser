@@ -18,3 +18,33 @@ spring:
       swagger-ui:
         path: /swagger-ui.html
 
+rfcb:
+  url: http://www.cbr.ru/
+  endpoint: /scripts/XML_daily.asp?data_req=
+  format-date: 'dd.MM.yyyy'
+  connection-timeout: 20000
+  response-timeout: 1
+  max-connections: 5
+  scheduler:
+    enabled: true
+    init-delay: 1
+    fixed-rate: 10
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: "always"
+  metrics:
+    export:
+      prometheus:
+        enabled: false
+  trace:
+    http:
+      enabled: true
+
+
+
