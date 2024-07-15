@@ -67,7 +67,7 @@ public class RfcbServiceImpl implements RfcbService {
                 .get();
 
         for (CurrencyXml currencyXml : exchangeRateListXml.getCurrencyList()) {
-            RateEntity rateEntity = currencyXmlExchangeRateEntityConverter.convert(currencyXml, exchangeRateListXml);
+            RateEntity rateEntity = currencyXmlExchangeRateEntityConverter.convert(currencyXml, exchangeRateListXml, dateTimeFormatter);
             repository.save(rateEntity);
             log.debug("Saved rateEntity: {}", rateEntity);
         }

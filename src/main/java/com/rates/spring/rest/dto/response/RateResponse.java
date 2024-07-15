@@ -34,11 +34,11 @@ public class RateResponse {
 
     /** Страна */
     @Schema(description =  "Страна")
-    private CountryEntity country;
+    private CountryResponse country;
 
     /** Курс валюты по словарю */
     @Schema(description =  "Курс валюты по словарю")
-    private RateDictEntity rateDictId;
+    private RateDictResponse rateDict;
 
     /** Дата курса */
     @Schema(description = "Дата курса")

@@ -12,14 +12,14 @@ import java.util.List;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@XmlRootElement(name = "ExRate")
+@XmlRootElement(name = "ValCurs")
 public class ExchangeRateListXml {
     /**
      * Дата курса
      */
     @XmlAttribute(name = "Date")
-    private String Date;
+    private String date;
 
-    @XmlElement(name = "Currency")
+    @XmlElement(name = "Valute")
     private List<CurrencyXml> currencyList;
 }

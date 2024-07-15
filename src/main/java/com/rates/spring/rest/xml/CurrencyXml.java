@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@XmlRootElement(name = "Currency")
+@XmlRootElement(name = "Valute")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CurrencyXml {
 

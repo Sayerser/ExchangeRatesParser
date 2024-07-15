@@ -24,7 +24,7 @@ public abstract class AFixationBaseEntity extends ABaseEntity implements Fixatio
      * Дата создания записи
      */
     @CreationTimestamp
-    @Column(name = "created", nullable = false, insertable = false, updatable = false)
+    @Column(name = "created", nullable = false, updatable = false)
     private LocalDateTime created = LocalDateTime.now();
 
     /**

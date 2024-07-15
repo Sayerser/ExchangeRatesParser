@@ -24,7 +24,7 @@ create table rates (
     nominal bigint not null,
     rate_date timestamp(6) not null,
     rate_dict_id uuid not null, -- Исправлено на uuid
-    updated timestamp(6) not null,
+    updated timestamp(6),
     id uuid not null,
     currency_id varchar(255) not null,
     primary key (id),

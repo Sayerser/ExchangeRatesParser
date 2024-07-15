@@ -12,11 +12,12 @@ spring:
     locations: classpath:db/migration
     baseline-on-migrate: true
 
-    springdoc:
-      api-docs:
-        path: /api-docs
-      swagger-ui:
-        path: /swagger-ui.html
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
 
 rfcb:
   url: http://www.cbr.ru/
@@ -25,26 +26,10 @@ rfcb:
   connection-timeout: 20000
   response-timeout: 1
   max-connections: 5
-  scheduler:
-    enabled: true
-    init-delay: 1
-    fixed-rate: 10
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: "always"
-  metrics:
-    export:
-      prometheus:
-        enabled: false
-  trace:
-    http:
-      enabled: true
+scheduler:
+  enabled: true
+  init-delay: 1
+  fixed-rate: 10
 
 
 

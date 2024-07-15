@@ -29,12 +29,12 @@ public class RateEntity extends AFixationBaseEntity {
     /** Страна */
     @ManyToOne
     @JoinColumn(name = "country_id")
-    private CountryEntity countryId;
+    private CountryEntity country;
 
     /** Курс валюты по словарю */
     @ManyToOne
     @JoinColumn(name = "rate_dict_id")
-    private RateDictEntity rateDictId;
+    private RateDictEntity rateDict;
 
     /** Дата курса */
     @Column(name = "rate_date")
